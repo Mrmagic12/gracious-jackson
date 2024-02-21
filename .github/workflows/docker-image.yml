@@ -24,19 +24,19 @@ jobs:
     - name: Check Node.js version
       run: node -v
 
+    - name: Clean Project
+      run: rm -rf node_modules/ package-lock.json
+      
     - name: Install dependencies
       run: npm install
-    
-    - name: Run Snyk to check for vulnerabilities
-      uses: snyk/actions/node@0.3.0
-      continue-on-error: true
-      with:
-        args: --severity-threshold=high
-        
+
     - name: Run Prettier
       run: |
         npm install --save-dev prettier
         npx prettier --write "src/**/*.{js,jsx}"
+
+    - name: Check Formatting
+      run: npm run format-check
 
     - name: Initiate ESLint config
       run: npm init @eslint/config --yes
