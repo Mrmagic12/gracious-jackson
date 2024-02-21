@@ -23,9 +23,9 @@ jobs:
         node-version: 16
     - name: Check Node.js version
       run: node -v
-      
+
     - name: Install dependencies
-      run: npm Install
+      run: npm install
     
     - name: Run Prettier
       run: |
