@@ -17,13 +17,15 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file .devcontainer/Dockerfile --tag jobet:$(date +%s)
     
-    - uses: actions/setup-node@v2
-    - name: Use Node.js 
+    - name: Use Node.js
+      uses: actions/setup-node@v2
       with:
         node-version: 16
+    - name: Check Node.js version
+      run: node -v
 
     - name: Install dependencies
-      run: npm Install
+      run: npm install
     
     - name: Run Prettier
       run: |
