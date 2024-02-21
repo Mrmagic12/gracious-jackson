@@ -24,6 +24,16 @@ jobs:
 
     - name: Install dependencies
       run: npm Install
+    
+    - name: Run Prettier
+      run: |
+        npm install --save-dev prettier
+        npx prettier --check
+
+    - name: Run ESLint
+      run: |
+        npm install --save-dev eslint-plugin-react eslint-plugin-jsx-ally
+        npx eslint "src/**/*.{js,jsx}"
 
     - name: Run build
       run: npm run build
