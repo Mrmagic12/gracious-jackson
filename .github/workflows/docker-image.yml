@@ -36,7 +36,7 @@ jobs:
       run: |
         npm install --save-dev eslint-plugin-jsx-a11y
         npx eslint "src/**/*.{js,jsx}"
-        npm init @eslint/config
+        npm init @eslint/config --yes
 
     - name: Run build
       run: npm run build
