@@ -30,12 +30,13 @@ jobs:
     - name: Run Prettier
       run: |
         npm install --save-dev prettier
-        npx prettier --check
+        npx prettier --check "src/**/*.{js,jsx}"
 
     - name: Run ESLint
       run: |
         npm install --save-dev eslint-plugin-jsx-a11y
         npx eslint "src/**/*.{js,jsx}"
+        npm init @eslint/config
 
     - name: Run build
       run: npm run build
