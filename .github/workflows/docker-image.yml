@@ -34,7 +34,7 @@ jobs:
 
     - name: Run ESLint
       run: |
-        npm install --save-dev eslint-plugin-react eslint-plugin-jsx-ally
+        npm install --save-dev eslint-plugin-jsx-a11y
         npx eslint "src/**/*.{js,jsx}"
 
     - name: Run build
