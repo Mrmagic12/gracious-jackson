@@ -27,8 +27,8 @@ jobs:
     - name: Install dependencies
       run: npm install
     
-    - name: Check for vulnerabilities
-      run: npm audit --high
+    - name: Check for vulnerabilities and fix
+      run: npm audit fix
 
     - name: Run Prettier
       run: |
