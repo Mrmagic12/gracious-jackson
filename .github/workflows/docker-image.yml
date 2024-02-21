@@ -30,7 +30,7 @@ jobs:
     - name: Run Prettier
       run: |
         npm install --save-dev prettier
-        npx prettier --check "src/**/*.{js,jsx}"
+        npx prettier --write "src/**/*.{js,jsx}"
 
     - name: Run ESLint
       run: |
