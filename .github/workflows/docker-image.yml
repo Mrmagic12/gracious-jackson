@@ -27,11 +27,8 @@ jobs:
     - name: Install dependencies
       run: npm install
     
-    - name: Run Snyk to check for vulnerabilities
-      uses: snyk/actions/node@0.3.0
-      continue-on-error: true
-      with:
-        args: --severity-threshold=high
+    - name: Check for vulnerabilities
+      run: npm audit --high
 
     - name: Run Prettier
       run: |
