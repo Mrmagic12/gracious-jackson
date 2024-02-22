@@ -8,7 +8,6 @@
   ],
   "main": "src/index.js",
   "dependencies": {
-    "@typescript-eslint/parser": "^7.0.2",
     "babel": "^6.23.0",
     "node": "^21.6.2",
     "prettier": "^3.2.5",
@@ -21,6 +20,7 @@
     "@babel/preset-env": "^7.23.9",
     "@babel/runtime": "7.13.8",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
     "eslint": "^8.56.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "typescript": "^3.9.10"
