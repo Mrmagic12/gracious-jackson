@@ -47,6 +47,12 @@ jobs:
     - name: Initiate ESLint config
       run: npm init @eslint/config --yes
       
+    - name: Update ESLint
+      run: npm install eslint@latest --save-dev
+    
+    - name: Install eslint-config-standard
+      run: npm install --save-dev eslint-config-standard
+      
     - name: Run ESLint
       run: |
         npm install --save-dev eslint-plugin-jsx-a11y
