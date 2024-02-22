@@ -1,7 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es2020": true
+    "es2019": true
   },
   "extends": [
     "eslint:recommended",
@@ -15,7 +15,6 @@
   },
   "plugins": ["@typescript-eslint", "react"],
   "rules": {
-    "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
   },
   "settings": {

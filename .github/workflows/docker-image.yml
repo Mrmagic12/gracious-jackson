@@ -21,6 +21,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16
+    - run: npm ci 
+    - run: npm run format-fix
         
     - name: Check Node.js version
       run: node -v
