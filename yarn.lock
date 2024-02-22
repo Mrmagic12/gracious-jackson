@@ -2184,7 +2184,7 @@
     "@typescript-eslint/typescript-estree" "5.62.0"
     "debug" "^4.3.4"
 
-"@typescript-eslint/parser@^7.0.0":
+"@typescript-eslint/parser@^7.0.0", "@typescript-eslint/parser@^7.0.2":
   "integrity" "sha512-GdwfDglCxSmU+QTS9vhz2Sop46ebNCXpPPvsByK7hu0rFGRHL+AusKQJ7SoN+LbLh6APFpQwHKmDSwN35Z700Q=="
   "resolved" "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-7.0.2.tgz"
   "version" "7.0.2"
