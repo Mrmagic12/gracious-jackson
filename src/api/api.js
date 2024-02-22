@@ -1,5 +1,5 @@
 import express from "express";
-import { Product } from "./models";
+import { Product } from "./database/database.js";
 
 const app = express();
 app.use(express.json());
