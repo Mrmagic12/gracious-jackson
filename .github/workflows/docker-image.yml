@@ -38,6 +38,9 @@ jobs:
     - name: Check Formatting
       run: npm run format-check
 
+    - name: Update ESLint
+      run: npm update eslint
+      
     - name: Initiate ESLint config
       run: npm init @eslint/config --yes
       
