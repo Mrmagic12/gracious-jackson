@@ -26,16 +26,25 @@ app.get("/products/:id", async (req, res) => {
   }
 });
 
-app.delete("/products/:id", async (req, res) => {
-  try{
-    const product = await Product.findByPk(req.params.id);
-    if(product){
-      await product.destroy();
-      res.status(204).send();    
-    }else{
-      res.status(404).json({message: "Product not found"});
-    }
-  } catch(err){
-    res.status(500).json({message: err.message}); 
+app.post("/products", async (req, res) => {
+  try {
+    const product = await Product.create(req.body);
+    res.status(201).json(product);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
   }
-})
+});
+
+app.delete("/products/:id", async (req, res) => {
+  try {
+    const product = await Product.findByPk(req.params.id);
+    if (product) {
+      await product.destroy();
+      res.status(204).send();
+    } else {
+      res.status(404).json({ message: "Product not found" });
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
