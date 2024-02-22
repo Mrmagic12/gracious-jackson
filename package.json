@@ -9,24 +9,35 @@
   "main": "src/index.js",
   "dependencies": {
     "babel": "^6.23.0",
+    "node": "^21.6.2",
     "prettier": "^3.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
     "@babel/runtime": "7.13.8",
+<<<<<<< HEAD
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "typescript": "^4.4.4"
+=======
     "eslint": "^8.56.0",
     "typescript": "^3.9.10"
+>>>>>>> 56bb18000706071ac3a809b0c1880e393f18471c
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --passWithNoTests",
+    "lint": "eslint 'src/**/*.{js,jsx}' --quiet",
     "eject": "react-scripts eject",
-    "format-check": "prettier -c \"**/*.js\""
+    "format-check": "prettier -c \"**/*.{js,jsx}\"",
+    "format-fix": "prettier --write \"**/*.{js,jsx}\""
   },
   "browserslist": [
     ">0.2%",

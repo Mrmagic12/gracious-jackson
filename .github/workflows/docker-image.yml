@@ -21,6 +21,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16
+    - run: npm ci 
+    - run: npm run format-fix
+        
     - name: Check Node.js version
       run: node -v
 
@@ -38,6 +41,9 @@ jobs:
     - name: Check Formatting
       run: npm run format-check
 
+    - name: Update ESLint
+      run: npm update eslint
+      
     - name: Initiate ESLint config
       run: npm init @eslint/config --yes
       

@@ -1,3 +1,4 @@
+import React from "react";
 import "./styles.css";
 
 export default function App() {
@@ -6,5 +7,5 @@ export default function App() {
       <h1>Hello CodeSandbox v2</h1>
       <h2>Start editing to see some magic happen!</h2>
     </div>
-  )
+  );
 }
