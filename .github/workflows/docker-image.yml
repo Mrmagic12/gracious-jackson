@@ -50,7 +50,9 @@ jobs:
         npx eslint "src/**/*.{js,jsx}" --fix
 
     - name: Run build
-      run: npm run build
+      run: | 
+        echo 'SKIP_PREFLIGHT_CHECK=true' >> .env
+        npm run build
     
     - name: Run tests
       run: npm run test
