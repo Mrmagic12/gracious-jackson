@@ -1472,7 +1472,7 @@
     "@firebase/app-types" "0.9.0"
     "@firebase/util" "1.9.4"
 
-"@firebase/database@1.0.3":
+"@firebase/database@^1.0.3", "@firebase/database@1.0.3":
   version "1.0.3"
   resolved "https://registry.npmjs.org/@firebase/database/-/database-1.0.3.tgz"
   integrity sha512-9fjqLt9JzL46gw9+NRqsgQEMjgRwfd8XtzcKqG+UYyhVeFCdVRQ0Wp6Dw/dvYHnbH5vNEKzNv36dcB4p+PIAAA==
