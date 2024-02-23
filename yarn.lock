@@ -7043,6 +7043,13 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.6"
 
+mongo@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/mongo/-/mongo-0.1.0.tgz"
+  integrity sha512-2MPq+GCNKhah0V/g/HIQI/S1h6Ycd87KPuXAITkeXWT6wncvABFxOaXdzCKlRvLSQRUkDimllrRrhoHUTD8usg==
+  dependencies:
+    mongodb "*"
+
 mongodb-connection-string-url@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/mongodb-connection-string-url/-/mongodb-connection-string-url-3.0.0.tgz"
@@ -7051,7 +7058,7 @@ mongodb-connection-string-url@^3.0.0:
     "@types/whatwg-url" "^11.0.2"
     whatwg-url "^13.0.0"
 
-mongodb@^6.3.0, mongodb@6.3.0:
+mongodb@*, mongodb@^6.3.0, mongodb@6.3.0:
   version "6.3.0"
   resolved "https://registry.npmjs.org/mongodb/-/mongodb-6.3.0.tgz"
   integrity sha512-tt0KuGjGtLUhLoU263+xvQmPHEGTw5LbcNC73EoFRYgSHwZt5tsoJC110hDyO1kjQzpgNrpdcSza9PknWN4LrA==
