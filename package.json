@@ -47,5 +47,7 @@
     "not dead",
     "not ie <= 11",
     "opera 70"
-  ]
+  ],
+  "author": "",
+  "license": "ISC"
 }
