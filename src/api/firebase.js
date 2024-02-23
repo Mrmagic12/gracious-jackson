@@ -1,50 +1,25 @@
-import express from "express";
-import { Product } from "./database/database.js";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-const app = express();
-app.use(express.json());
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-app.get("/products", async (req, res) => {
-  try {
-    const products = await Product.findAll();
-    res.json(products);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+logEvent(analytics, "event");
+const firebaseConfig = {
+  apiKey: "AIzaSyAxIb9ukRFMH0T-axysXvAgJ-NLMMx-f7g",
+  authDomain: "pos-ea5c9.firebaseapp.com",
+  databaseURL:
+    "https://pos-ea5c9-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "pos-ea5c9",
+  storageBucket: "pos-ea5c9.appspot.com",
+  messagingSenderId: "655303904063",
+  appId: "1:655303904063:web:69bb51e829f4f2c1d6a18a",
+  measurementId: "G-H9PEM4WQFN",
+};
 
-app.get("/products/:id", async (req, res) => {
-  try {
-    const product = await Product.findByPk(req.params.id);
-    if (product) {
-      res.json(product);
-    } else {
-      res.status(404).json({ message: "Product not found" });
-    }
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
-
-app.post("/products", async (req, res) => {
-  try {
-    const product = await Product.create(req.body);
-    res.status(201).json(product);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
-
-app.delete("/products/:id", async (req, res) => {
-  try {
-    const product = await Product.findByPk(req.params.id);
-    if (product) {
-      await product.destroy();
-      res.status(204).send();
-    } else {
-      res.status(404).json({ message: "Product not found" });
-    }
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
