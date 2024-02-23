@@ -1,68 +1,25 @@
-[debug] [2024-02-23T10:59:57.283Z] ----------------------------------------------------------------------
-[debug] [2024-02-23T10:59:57.285Z] Command:       /usr/local/bin/node /usr/local/share/npm-global/bin/firebase login
-[debug] [2024-02-23T10:59:57.285Z] CLI Version:   13.3.1
-[debug] [2024-02-23T10:59:57.285Z] Platform:      linux
-[debug] [2024-02-23T10:59:57.285Z] Node Version:  v20.11.0
-[debug] [2024-02-23T10:59:57.285Z] Time:          Fri Feb 23 2024 10:59:57 GMT+0000 (Coordinated Universal Time)
-[debug] [2024-02-23T10:59:57.286Z] ----------------------------------------------------------------------
+[debug] [2024-02-23T11:30:08.761Z] ----------------------------------------------------------------------
+[debug] [2024-02-23T11:30:08.763Z] Command:       /usr/local/bin/node /usr/local/share/npm-global/bin/firebase init
+[debug] [2024-02-23T11:30:08.764Z] CLI Version:   13.3.1
+[debug] [2024-02-23T11:30:08.764Z] Platform:      linux
+[debug] [2024-02-23T11:30:08.764Z] Node Version:  v20.11.0
+[debug] [2024-02-23T11:30:08.764Z] Time:          Fri Feb 23 2024 11:30:08 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-02-23T11:30:08.764Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-02-23T10:59:57.287Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
- 
-[debug] [2024-02-23T10:59:57.606Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2024-02-23T10:59:57.606Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2024-02-23T11:30:08.770Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-23T11:30:08.770Z] > authorizing via signed-in user (jobetcasquejo05@gmail.com)
 [info] 
-[info] Visit this URL on this device to log in:
-[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=484599631&redirect_uri=http%3A%2F%2Flocalhost%3A9005
-[info] 
-[info] Waiting for authentication...
-[debug] [2024-02-23T11:00:04.109Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
-[debug] [2024-02-23T11:00:04.109Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"f91d1bc1-2f1c-4fac-ada6-e1cd8674f6c7"}
-[debug] [2024-02-23T11:00:04.441Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
-[debug] [2024-02-23T11:00:04.441Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"4pBZVKnIyCr2Kx9-kHU1pNq1h7h8nfv1uPTRDofTKkc"}
-[info] 
-[info] To sign in to the Firebase CLI:
-[info] 
-[info] 1. Take note of your session ID:
-[info] 
-[info]    F91D1
-[info] 
-[info] 2. Visit the URL below on any device and follow the instructions to get your code:
-[info] 
-[info]    https://auth.firebase.tools/login?code_challenge=qmrMXSwOG_C42yg9tr7PLGZEISyU2DJM0PkxqBiZMoY&session=f91d1bc1-2f1c-4fac-ada6-e1cd8674f6c7&attest=4pBZVKnIyCr2Kx9-kHU1pNq1h7h8nfv1uPTRDofTKkc
-[info] 
-[info] 3. Paste or enter the authorization code below once you have it:
-[info] 
-[debug] [2024-02-23T11:01:57.492Z] ----------------------------------------------------------------------
-[debug] [2024-02-23T11:01:57.493Z] Command:       /usr/local/bin/node /usr/local/share/npm-global/bin/firebase login
-[debug] [2024-02-23T11:01:57.494Z] CLI Version:   13.3.1
-[debug] [2024-02-23T11:01:57.494Z] Platform:      linux
-[debug] [2024-02-23T11:01:57.494Z] Node Version:  v20.11.0
-[debug] [2024-02-23T11:01:57.494Z] Time:          Fri Feb 23 2024 11:01:57 GMT+0000 (Coordinated Universal Time)
-[debug] [2024-02-23T11:01:57.494Z] ----------------------------------------------------------------------
-[debug] 
-[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
- 
-[info] 
-[info] Visit this URL on this device to log in:
-[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=470227638&redirect_uri=http%3A%2F%2Flocalhost%3A9005
-[info] 
-[info] Waiting for authentication...
-[debug] [2024-02-23T11:02:05.266Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
-[debug] [2024-02-23T11:02:05.266Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"8d5466bb-1949-4ee4-a015-581aea7ba436"}
-[debug] [2024-02-23T11:02:05.639Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
-[debug] [2024-02-23T11:02:05.639Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"MzBKUyPJQv2g8Qf7HcLVHxC5B19nxqOA-YwXulHirFw"}
-[info] 
-[info] To sign in to the Firebase CLI:
-[info] 
-[info] 1. Take note of your session ID:
-[info] 
-[info]    8D546
-[info] 
-[info] 2. Visit the URL below on any device and follow the instructions to get your code:
-[info] 
-[info]    https://auth.firebase.tools/login?code_challenge=UPx2RlS3mK5aCg95c2K1soZeibYtGNvVM0eejIOyY_k&session=8d5466bb-1949-4ee4-a015-581aea7ba436&attest=MzBKUyPJQv2g8Qf7HcLVHxC5B19nxqOA-YwXulHirFw
-[info] 
-[info] 3. Paste or enter the authorization code below once you have it:
-[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspaces/workspace
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
