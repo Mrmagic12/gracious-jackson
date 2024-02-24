@@ -23,6 +23,11 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: ESLint Code Lint & Fix
+  # You may pin to the exact commit or the version.
+  # uses: permafrost-dev/eslint-docker-ga@0611438792291217c8c826957841d6aba36cfb99
+      uses: permafrost-dev/eslint-docker-ga@v1.0.0
+          
     - name: Run ESLint and Prettier
       run: |
         npm run lint-fix
