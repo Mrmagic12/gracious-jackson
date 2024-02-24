@@ -4,17 +4,13 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci
 
-RUN yarn install
+RUN yarn build 
 
 COPY . ./
 
 RUN npm run build
-
-RUN npm run format-check
-
-RUN npm run prettier
 
 EXPOSE 3000 
 
