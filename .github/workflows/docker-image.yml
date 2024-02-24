@@ -21,8 +21,24 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16
+    - name: Install dependencies
     - run: npm ci 
+
+    - name: Check and Fix formatting with ESLint
+
+    - name: Check and Fix Formatting Prettier
     - run: npm run format-fix
+
+    - name: Commit changes
+      run: |
+        git config --global.name 'github-actions[bot]'
+        git config --global.email 'github-actions[bot]@users.noreply.github.com'
+        git commit -am "Fix code style issues with ESLint and Prettier" --allow-empty
+        git push origin
+        
+    - run: npm run build
+    - run: npm run test
+
         
     - name: Check Node.js version
       run: node -v
