@@ -23,6 +23,8 @@ jobs:
         node-version: 16
     - run: npm ci 
     - run: npm run format-fix
+    - run: npm run build
+    - run: npm run test
         
     - name: Check Node.js version
       run: node -v

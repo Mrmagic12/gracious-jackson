@@ -6,8 +6,8 @@
       "command": "yarn install"
     },
     {
-      "command": "npm install",
-      "name": "n"
+      "name": "n",
+      "command": "npm install"
     }
   ],
 
