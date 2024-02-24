@@ -14,6 +14,8 @@ RUN npm run build
 
 RUN npm run format-check
 
+RUN npm run prettier
+
 EXPOSE 3000 
 
 CMD ["npm","start"]
