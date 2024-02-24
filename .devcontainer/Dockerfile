@@ -6,8 +6,6 @@ COPY package*.json ./
 
 RUN npm ci
 
-RUN yarn build 
-
 COPY . ./
 
 RUN npm run build
