@@ -27,14 +27,7 @@ jobs:
       run: |
         npm run lint-fix
         npm run format-fix
-
-    - name: Commit changes
-      run: |
-        git config --global.user.name 'github-actions[bot]'
-        git config --global.user.email 'github-actions[bot]@users.noreply.github.com'
-        git add .
-        git commit -m "Fix code style issues with ESLint and Prettier" || true
-        git push origin
+        
 
     - name: Run build
       run: npm run build
