@@ -28,7 +28,6 @@ jobs:
         npm run lint-fix
         npm run format-fix
         
-
     - name: Run build
       run: npm run build
 
