@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import "./styles.css";
 import { initializeApp } from "firebase/app";
+import axios from "axios";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAxIb9ukRFMH0T-axysXvAgJ-NLMMx-f7g",
