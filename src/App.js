@@ -28,6 +28,17 @@ export default function App() {
     signInWithEmailAndPassword(auth, email, password)
       .then((auth) => {
         console.log(auth);
+
+        axios
+          .get(
+            "https://pos-ea5c9-default-rtdb.asia-southeast1.firebasedatabase.app/.json",
+          )
+          .then((res) => {
+            console.log(res.data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       })
       .catch((e) => alert(e.message));
   };
@@ -56,6 +67,12 @@ export default function App() {
             <button type="submit" className="login-btn">
               Login
             </button>
+
+            <div>
+              <p>
+                Don't have an account? <a href="/register">Register</a>
+              </p>
+            </div>
           </form>
         </div>
       </div>
