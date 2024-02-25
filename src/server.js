@@ -1,6 +1,7 @@
 import express from "express";
 import api from "./api/api.js";
 import firebase from "firebase";
+import axios from "axios";
 
 const app = express();
 app.use(express.json());
@@ -26,15 +27,20 @@ const PORT = process.env.PORT || 3000;
 app.post("/", (req, res) => {
   const { name } = req.body;
   const data = { name };
-  firebase
-    .database()
-    .ref("data")
-    .push(data)
-    .then(() => {
-      res.send("Data added successfully");
+
+  axios
+    .post(
+      "https://pos-ea5c9-default-rtdb.asia-southeast1.firebasedatabase.app",
+      data,
+    )
+    .then((res) => {
+      //add restful api response
+      res.json({ message: "success", data: res.data });
     })
-    .catch((error) => {
-      res.send(`Error adding data: ${error}`);
+    .catch((err) => {
+      res
+        .status(500)
+        .json({ message: "Error adding data", error: err.toString() });
     });
 });
 
