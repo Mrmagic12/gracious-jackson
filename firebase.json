@@ -19,6 +19,12 @@
       "enabled": true,
       "port": 9000
     },
-    "singleProjectMode": true
+    "singleProjectMode": true,
+    "functions": {
+      "port": 3000
+    },
+    "pubsub": {
+      "port": 3001
+    }
   }
 }
