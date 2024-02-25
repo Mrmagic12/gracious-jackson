@@ -24,13 +24,43 @@ export default function App() {
 
   const login = (e) => {
     e.preventDefault();
-    auth
-      .signInWithEmailAndPassword(auth, email, password)
+    auth;
+    signInWithEmailAndPassword(auth, email, password)
       .then((auth) => {
         console.log(auth);
       })
       .catch((e) => alert(e.message));
   };
 
-  return <div className="container"></div>;
+  return (
+    //design a login form using semantic
+    <div>
+      <div>
+        <div>
+          <h1>Login Form</h1>
+        </div>
+      </div>
+      <div>
+        <div>
+          <form>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit" onClick={login}>
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
