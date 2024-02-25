@@ -14,6 +14,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "firebase": "^10.8.0",
+    "firebase-admin": "^12.0.0",
     "invariant": "^2.2.4",
     "levenary": "^1.1.1",
     "lint-fix": "^0.24.0",

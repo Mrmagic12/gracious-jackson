@@ -2,10 +2,16 @@ import express from "express";
 import api from "./api/api.js";
 import firebase from "firebase";
 import axios from "axios";
+import admin from "firebase-admin";
+import * as serviceAccount from "./serviceAccountKey.json";
 
 const app = express();
 app.use(express.json());
 app.use("/", api);
+
+admin.initializeApp({
+  credential: admin.credential.applicationDefault(serviceAccount),
+});
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -34,6 +40,8 @@ app.post("/", (req, res) => {
       data,
     )
     .then((res) => {
+      //add method to enable user to add data
+
       //add restful api response
       res.json({ message: "success", data: res.data });
     })
