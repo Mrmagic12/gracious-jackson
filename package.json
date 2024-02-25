@@ -9,10 +9,11 @@
   "main": "src/index.js",
   "dependencies": {
     "@firebase/database": "^1.0.3",
+    "axios": "^1.6.7",
     "babel": "^6.23.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "firebase": "^10.8.0",
+    "firebase": "^10.6.0",
     "invariant": "^2.2.4",
     "levenary": "^1.1.1",
     "lint-fix": "^0.24.0",
@@ -20,7 +21,7 @@
     "prettier": "^3.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "sqlite": "^5.1.1"
   },
   "devDependencies": {
@@ -30,8 +31,8 @@
     "@babel/runtime": "7.13.8",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
-    "eslint": "^8.56.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
     "typescript": "^4.4.4"
   },
   "scripts": {
@@ -42,7 +43,8 @@
     "lint-fix": "eslint --fix 'src/**/*.{js,jsx}'",
     "eject": "react-scripts eject",
     "format-check": "prettier -c \"**/*.{js,jsx}\"",
-    "format-fix": "prettier --write \"**/*.{js,jsx}\""
+    "format-fix": "prettier --write \"**/*.{js,jsx}\"",
+    "lint-fix": "lint-fix 'src/**/*.{js,jsx}' --quiet"
   },
   "browserslist": [
     ">0.2%",
