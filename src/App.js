@@ -32,7 +32,6 @@ export default function App() {
       .catch((e) => alert(e.message));
   };
 
-<<<<<<< HEAD
   return (
     <div className="App">
       <div className="container">
@@ -62,7 +61,4 @@ export default function App() {
       </div>
     </div>
   );
-=======
-  return <div className="container"></div>;
->>>>>>> 4ee9262ad9ca29de9ebe13b6bb08ce4504257f89
 }
