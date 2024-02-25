@@ -32,5 +32,35 @@ export default function App() {
       .catch((e) => alert(e.message));
   };
 
-  return <div className="container"></div>;
+  return (
+    //design a login form using semantic
+    <div>
+      <div>
+        <div>
+          <h1>Login Form</h1>
+        </div>
+      </div>
+      <div>
+        <div>
+          <form>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit" onClick={login}>
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
