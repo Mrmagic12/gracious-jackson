@@ -42,7 +42,8 @@
     "lint": "eslint 'src/**/*.{js,jsx}' --quiet",
     "eject": "react-scripts eject",
     "format-check": "prettier -c \"**/*.{js,jsx}\"",
-    "format-fix": "prettier --write \"**/*.{js,jsx}\""
+    "format-fix": "prettier --write \"**/*.{js,jsx}\"",
+    "lint-fix": "lint-fix 'src/**/*.{js,jsx}' --quiet"
   },
   "browserslist": [
     ">0.2%",
