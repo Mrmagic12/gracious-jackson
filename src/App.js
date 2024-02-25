@@ -24,8 +24,8 @@ export default function App() {
 
   const login = (e) => {
     e.preventDefault();
-    auth
-      .signInWithEmailAndPassword(auth, email, password)
+    auth;
+    signInWithEmailAndPassword(auth, email, password)
       .then((auth) => {
         console.log(auth);
       })
